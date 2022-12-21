@@ -4,7 +4,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -29,7 +28,8 @@ public class Room {
     public String toString() {
         return "\nRoom Id:" + id +
                 "\nName: " + name +
-                "\nCoworking: " + coworking +
+                "\nCoworking Name: " + coworking.getName() +
+                "\nCoworking Address: " + coworking.getAddress() +
                 "\nFloor Number: " + floorNumber +
                 "\nNumber of Places: " + numberOfPlaces +
                 "\n - - - - - - - - - - - - - - - - - -";

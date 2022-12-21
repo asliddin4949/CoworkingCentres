@@ -29,8 +29,10 @@ public class Order {
     @Override
     public String toString() {
         return "\nOrder Id: " + id +
-                "\nUser: " + user +
-                "\nPlace: " + place +
+                "\nUser Name: " + user.getName() +
+                "\nCoworking name: "+place.getRoom().getCoworking().getName()+
+                "\nRoom Name: " + place.getRoom().getName() +
+                "\nPlace Number: "+place.getPlaceNumber()+
                 "\nSum: " + sum +
                 "\nDate: " + Date +
                 "\n- - - - - - - - - - -";
