@@ -1,0 +1,23 @@
+Coworking Booking dasturi
+
+
+
+
+
+
+User qila oladigan ishlar:
+Coworking markazni tanlaydi.
+Undan xonani tanlaydi va biror joyni band qiladi.
+O’zi band qilgan stullar ro’yxatini ko’ra oladi.
+
+Asosiy ochiladigan classlar:
+User(id, name, login, password, role, balance)
+Coworking(id, name, address)
+CoworkingManager(id, coworking, user(manager))
+Room(id, name, coworking, floorNumber, numberOfPlaces, priceForPerPlace)
+Place(id, room, price, placeNumber, status(booked, available))
+Order(id, user, place, sum, date)
+
+ENUM:
+Role(admin, manager, user)
+Status(booked, available)
