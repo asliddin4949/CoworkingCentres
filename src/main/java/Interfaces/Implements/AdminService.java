@@ -82,11 +82,33 @@ public class AdminService implements IAdmin {
                 if (coworkingManager == null) {
                     Storage.coworkingManagers.add(new CoworkingManager(CoworkingManager.currentId, coworking, manager));
                     System.out.println("Manager Added To Coworking");
-                }else {
+                } else {
                     System.out.println("This manager is already manager of this Coworking!");
                 }
             }
 
         }
+    }
+
+    public void showUsers() {
+        for (User user : Storage.users) {
+            if (user.getRole().equals(Role.USER)) {
+                System.out.println(user);
+            }
+        }
+    }
+
+    @Override
+    public void showManager() {
+        for (User user : Storage.users) {
+            if (user.getRole().equals(Role.MANAGER)) {
+                System.out.println(user);
+            }
+        }
+    }
+
+    @Override
+    public void showOrders() {
+        Storage.orders.forEach(System.out::println);
     }
 }

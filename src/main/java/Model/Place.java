@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Getter
@@ -29,18 +30,20 @@ public class Place {
 
     @Override
     public String toString() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy");
         return "\nPlace Id:" + id +
                 "\nCoworking Name: " + room.getCoworking().getName() +
-                "\nCoworking Address: "+room.getCoworking().getAddress()+
-                "\nRoom Name: "+ room.getName()+
+                "\nCoworking Address: " + room.getCoworking().getAddress() +
+                "\nRoom Name: " + room.getName() +
                 "\nPlace Number: " + placeNumber +
                 "\nPrice: " + price +
-                "\nDate: " + date +
+                "\nDate: " + simpleDateFormat.format(date) +
                 "\nStatus=" + status +
                 "\n - - - - - - - - - - - - - -";
     }
 
     public static int currentId = 1;
+
     {
         currentId++;
     }

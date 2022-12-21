@@ -1,9 +1,8 @@
-import Interfaces.Consoles.Application;
-import Interfaces.MainMenu;
+import Application.Implement.Application;
+
 
 public class Main {
     public static void main(String[] args) {
-        MainMenu mainMenu = Application.getInstance();
-        mainMenu.applicationStart();
+       Application.getInstance().applicationStart();
     }
 }

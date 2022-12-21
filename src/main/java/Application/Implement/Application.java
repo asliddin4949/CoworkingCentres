@@ -1,7 +1,7 @@
-package Interfaces.Consoles;
+package Application.Implement;
 
 import Interfaces.Implements.SignInSignUpService;
-import Interfaces.MainMenu;
+import Application.MainMenu;
 
 import java.util.Scanner;
 
